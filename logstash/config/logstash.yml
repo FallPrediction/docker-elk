@@ -5,3 +5,14 @@
 http.host: 0.0.0.0
 
 node.name: logstash
+
+xpack:
+  # https://www.elastic.co/guide/en/logstash/current/monitoring-with-elastic-agent.html
+  monitoring:
+    enabled: true
+    elasticsearch:
+      username: 'elastic'
+      password: 'changeme'
+      hosts: ["http://elasticsearch:9200"]
+      ssl:
+        verification_mode: none
